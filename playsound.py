@@ -9,7 +9,13 @@ def play_wav(file_path, play_duration, repeat_count):
 
         # Trim playback
         play_segment = audio[:play_duration * 1000]
-
+        
+        if play_duration * 1000 > len(audio):
+            # let the user know when the requested playback duration is longer than the file's audio length
+            print(
+                f"Warning: Requested play duration ({play_duration} seconds) is longer than the audio length "
+                f"({len(audio) // 1000} seconds). The extra duration will be silent."
+            )
         # Repeat playback
         for i in range(repeat_count):
             print(f"Playing round {i + 1}/{repeat_count}")
