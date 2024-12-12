@@ -26,10 +26,18 @@ python playsound.py <filename.wav> <play_duration_seconds> <repeat_count>
 ### Example
 To play the file cantinaband3.wav for 2 seconds and repeat it 5 times:
 ```
-python playsound.py cantinaband3.wav 5 3
+python playsound.py cantinaband.wav 5 3
+```
+
+If the requested play duration is longer than the audio length, the extra duration will be silent. A warning will be shown in the terminal.
+
+For example:
+```
+Warning: Requested play duration (6 seconds) is longer than the audio length (4 seconds). The extra duration will be silent.
 ```
 
 ### Parameters
 - `<filename.wav>`: Path to the `.wav` file.
 - `<play_duration_seconds>`: Duration to play the audio in seconds.
 - `<repeat_count>`: Number of times to repeat playback.
+
