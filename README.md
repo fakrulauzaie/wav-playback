@@ -24,7 +24,7 @@ python playsound.py <filename.wav> <play_duration_seconds> <repeat_count>
 ```
 
 ### Example
-To play the file cantinaband3.wav for 2 seconds and repeat it 5 times:
+To play the file cantinaband.wav for 2 seconds and repeat it 5 times:
 ```
 python playsound.py cantinaband.wav 2 5
 ```
